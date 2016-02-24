@@ -5,9 +5,17 @@
     <script>
       // This code produces a random list of groceries, don't worry too much about what it's doing.. unless you're curious :)
       var groceries = (function(){var o=['potatoes','bacon','eggs','milk','chocolate','orange juice','detergent','lettuce','yogurt','toothpaste'],r=[];for(var i=0;i<o.length;i++){r.push({name:o[Math.floor(Math.random()*(o.length-1)+1)],cost:Number((Math.random()*40).toFixed(2))});}return r;})();
-
+      console.log(groceries);
       // Write your code here
 
+      var mostExpensiveGrocery;
+      for(var i = 0; i < groceries.length; i ++) {
+        groceries[i].cheap = groceries[i].price <= 10;
+        if(!mostExpensiveGrocery || mostExpensiveGrocery.price < groceries[i].price) {
+          mostExpensiveGrocery = groceries[i];
+        }
+        }
+      }
     </script>
   </body>
 </html>

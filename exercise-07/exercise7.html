@@ -1,8 +1,39 @@
 <!DOCTYPE html>
+<!-- <html>
+  <body>
+    <h1>Exercise 7</h1>
+    <script>
+    for (var i = 0; i < 8; i++) {
+      console.log (" # # # #");
+        for (i % 2 === 0) {
+          console.log ("# # # #");
+        }
+    }
+    </script>
+  </body>
+</html> -->
+
 <html>
   <body>
     <h1>Exercise 7</h1>
     <script>
+      var board = '', size = 8;
+
+      for(var row = 0; row < size; row++){
+        var rowContent = '';
+        for(var column = 0; column < size; column++){
+          if((row + column) % 2 === 0){
+            //We know that we are to place a space due to even position on board
+            rowContent += ' ';
+          } else {
+            //We know that we are to place a pound sign 
+            rowContent += '#';
+          }
+        }
+        board += rowContent + '\n';
+      }
+
+      console.log(board);
 
     </script>
   </body>

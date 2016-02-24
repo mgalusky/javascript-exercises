@@ -11,8 +11,21 @@
         [18,6,48,64]
       ];
 
-      // Write your code here
-
+      var highChildArray = 0;
+      for (i = 0; i < numbers.length; i++) {
+        var sumChildArray = 0;
+        for (j = 0; j < numbers[i].length; j++) {
+          var childArr = numbers[i];
+          sumChildArray += childArr[j];
+          // console.log(sumChildArray);
+        }
+        // console.log(sumChildArray)
+        if (sumChildArray > highChildArray) {
+          highChildArray = sumChildArray;
+        }
+      }
+      console.log (highChildArray);
+      
     </script>
   </body>
 </html>

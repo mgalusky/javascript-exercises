@@ -22,7 +22,23 @@
         }
       ];
 
-      // Write your code here
+      // console.log (students[0].grade)
+      var letterGrade = 0
+      for (var i = 0; i < students.length; i++) {
+        if (students[i].grade < 65) {
+            letterGrade = 'F';
+          } else if (students[i].grade < 72) {
+            letterGrade = 'E';
+          } else if (students[i].grade < 80) {
+            letterGrade = 'D';
+          } else if (students[i].grade < 88) {
+            letterGrade = 'C';
+          } else if (students[i].grade < 95) {
+            letterGrade = 'B';
+          } else letterGrade = 'A';
+          
+          console.log(students[i].name.concat(letterGrade))
+      }
 
     </script>
   </body>
